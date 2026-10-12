@@ -1,0 +1,37 @@
+{
+  "genres": ["adventure", "comedy", "drama", "mystery", "sci-fi"],
+  "moods": ["hopeful", "funny", "emotional", "mysterious", "exciting"],
+  "settings": {
+    "city": {"name": "A sleepy city street", "visual": "A quiet city street with warm window lights"},
+    "forest": {"name": "An enchanted forest", "visual": "Tall trees, floating dust, and a narrow forest path"},
+    "school": {"name": "A school after sunset", "visual": "Empty corridors lit by the last orange rays"},
+    "space": {"name": "A small space station", "visual": "A blue planet turning below a quiet observation deck"}
+  },
+  "lengths": {
+    "short": {"label": "3–4 minutes", "minutes": 4},
+    "medium": {"label": "5–6 minutes", "minutes": 6},
+    "long": {"label": "7–8 minutes", "minutes": 8}
+  },
+  "stories": {
+    "adventure": {
+      "hopeful": {"inciting": "a lost map appears in a library book", "goal": "return a hidden treasure to its rightful owner", "opening": "This map was waiting for us.", "obstacle": "the map changes whenever they look away", "action": "follows the final mark without a safety net", "turn": "Being brave does not mean being certain.", "ending": "The treasure is a letter reminding them that the journey was the real gift.", "final_line": "We found exactly what we needed."},
+      "funny": {"inciting": "a delivery goes to the wrong doorstep", "goal": "solve the mistake before the real owner arrives", "opening": "Why is there a penguin in this box?", "obstacle": "every helpful idea makes the problem bigger", "action": "turns the chaos into a surprisingly clever plan", "turn": "Okay, nobody panic. Especially the penguin.", "ending": "The mistake becomes the start of a new friendship.", "final_line": "Best wrong address ever."}
+    },
+    "comedy": {
+      "emotional": {"inciting": "an old voicemail plays at the worst possible moment", "goal": "recreate one perfect memory for a loved one", "opening": "I thought I deleted this.", "obstacle": "nothing goes according to the carefully written plan", "action": "stops trying to make everything perfect", "turn": "Maybe perfect was never the point.", "ending": "A messy surprise becomes the memory they both needed.", "final_line": "Save this one too."},
+      "funny": {"inciting": "the school mascot disappears before the big event", "goal": "find it without letting anyone discover the embarrassing truth", "opening": "Nobody saw a six-foot chicken leave, right?", "obstacle": "the mascot keeps turning up in increasingly public places", "action": "leads a ridiculous rescue mission", "turn": "I have a plan. It is not a good plan.", "ending": "The mascot returns just in time, wearing a tiny crown.", "final_line": "We are never speaking of this again."}
+    },
+    "drama": {
+      "hopeful": {"inciting": "a garden begins growing in an abandoned place", "goal": "protect it from being cleared away", "opening": "Something is alive here.", "obstacle": "the adults only see an empty lot", "action": "invites the whole neighborhood to witness it", "turn": "You cannot erase what people care for.", "ending": "The lot becomes a community garden.", "final_line": "Tomorrow, we plant more."},
+      "emotional": {"inciting": "two friends find a goodbye letter written years ago", "goal": "deliver it to the person who was meant to read it", "opening": "They were waiting all this time.", "obstacle": "the recipient has stopped believing old promises", "action": "shares the letter even though it may hurt", "turn": "Some goodbyes are really doors.", "ending": "The letter brings quiet forgiveness.", "final_line": "I am glad you came back."}
+    },
+    "mystery": {
+      "mysterious": {"inciting": "every clock in town stops at the same minute", "goal": "discover what happened before time starts again", "opening": "It is 8:17 everywhere.", "obstacle": "the only witness remembers tomorrow instead of today", "action": "trusts a detail everyone else ignored", "turn": "The answer was hiding in the silence.", "ending": "Time moves again, but one clock remains stopped as a warning.", "final_line": "Now we know when to listen."},
+      "exciting": {"inciting": "a coded message arrives from an unknown sender", "goal": "decode it before the final train leaves", "opening": "This is not a coincidence.", "obstacle": "the clues point to people they trust", "action": "chooses the risky final clue", "turn": "The truth does not need permission.", "ending": "The sender is revealed as their future self.", "final_line": "The next clue is already on its way."}
+    },
+    "sci-fi": {
+      "hopeful": {"inciting": "a tiny signal reaches Earth from a forgotten satellite", "goal": "answer it before the satellite loses power", "opening": "Someone out there is still listening.", "obstacle": "the signal contains a map of a place that no longer exists", "action": "sends a message built from a childhood song", "turn": "Maybe being heard starts with speaking anyway.", "ending": "A second signal answers from beyond the stars.", "final_line": "Hello, wherever you are."},
+      "exciting": {"inciting": "the station loses gravity during a rescue drill", "goal": "bring the crew home safely", "opening": "That was not part of the drill.", "obstacle": "the navigation system has only one working minute", "action": "manually pilots through the debris field", "turn": "Hold on. We are going home.", "ending": "The station stabilizes as the planet rises behind it.", "final_line": "Mission accomplished."}
+    }
+  }
+}

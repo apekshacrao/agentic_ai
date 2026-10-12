@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SceneSpark | Mini Movie Maker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="hero"><nav><a class="brand" href="/">SceneSpark</a><a href="#saved">Saved projects</a></nav><div class="hero-copy"><p class="eyebrow">MINI MOVIE MAKER</p><h1>Turn one idea into<br><em>a little film.</em></h1><p>Build a short script and visual storyboard with a few creative choices. No AI keys, no complicated tools—just your imagination.</p></div></header>
+  <main class="page">
+    <section class="creator-card"><div class="section-heading"><p class="eyebrow">START CREATING</p><h2>Your film begins here</h2><p>Choose a mood, a world, and the people who bring it to life.</p></div>
+      <form id="movie-form" class="creator-form">
+        <label>Movie title<input name="title" placeholder="e.g. The Last Lantern" required></label>
+        <label>Genre<select id="genre" name="genre" required></select></label>
+        <label>Mood<select id="mood" name="mood" required></select></label>
+        <label>Setting<select id="setting" name="setting" required></select></label>
+        <label>Length<select id="length" name="length" required></select></label>
+        <label>Characters<input name="characters" placeholder="Maya, Leo (optional)"></label>
+        <button type="submit">Create my movie <span>→</span></button>
+      </form><p id="message" class="message" role="alert"></p>
+    </section>
+    <section id="movie-result" class="result hidden"><div class="result-header"><div><p class="eyebrow">YOUR CREATION</p><h2 id="movie-title"></h2><p id="logline" class="logline"></p></div><button id="save-button" class="secondary-button">Save project</button></div><div class="movie-meta" id="movie-meta"></div><div class="movie-workspace"><div><h3>Script</h3><pre id="script"></pre></div><div><h3>Storyboard</h3><div id="storyboard"></div></div></div></section>
+    <section id="saved" class="saved-section"><div class="section-heading"><p class="eyebrow">YOUR STORY ARCHIVE</p><h2>Saved projects</h2></div><div id="saved-list" class="saved-list"><p class="muted">No saved movies yet.</p></div></section>
+  </main>
+  <footer>SceneSpark · A beginner-friendly storytelling studio</footer><script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
