@@ -1,0 +1,56 @@
+{
+  "Mysuru": {
+    "name": "Mysuru",
+    "summary": "A graceful heritage city of royal palaces, fragrant gardens, and slow South Indian mornings.",
+    "image": "https://images.unsplash.com/photo-1600100397608-f010e1f5a7be?auto=format&fit=crop&w=1000&q=80",
+    "highlights": ["Mysore Palace", "Brindavan Gardens", "Chamundi Hills"],
+    "best_for": "Heritage, gardens & relaxed weekends",
+    "accommodation": [
+      {"name": "Royal Orchid stay", "nightly": 3200, "description": "Comfortable central stay with breakfast"}
+    ],
+    "transport": {"mode": "Train or private cab", "round_trip": 1800, "description": "Easy rail connections from Bengaluru"},
+    "food": {"daily": 900, "recommendation": "Mysuru masala dosa, thali, and filter coffee"},
+    "activities": [
+      {"morning": "Mysore Palace guided tour", "afternoon": "Local thali lunch and Devaraja Market", "evening": "Palace illumination or quiet café", "cost": 100},
+      {"morning": "Sunrise at Chamundi Hills", "afternoon": "Brindavan Gardens stroll", "evening": "Relax with a sandalwood spa", "cost": 80},
+      {"morning": "Heritage walk through old Mysuru", "afternoon": "Craft shopping and local food", "evening": "Rooftop sunset", "cost": 50},
+      {"morning": "Leisurely hotel breakfast", "afternoon": "Garden picnic", "evening": "Pack for departure", "cost": 0}
+    ]
+  },
+  "Ooty": {
+    "name": "Ooty",
+    "summary": "A cool, green hill escape wrapped in tea gardens, misty lakes, and colonial charm.",
+    "image": "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1000&q=80",
+    "highlights": ["Botanical Garden", "Ooty Lake", "Tea Museum"],
+    "best_for": "Hills, tea & cool-weather escapes",
+    "accommodation": [
+      {"name": "Blue Hills cottage", "nightly": 3800, "description": "Cosy cottage with valley views"}
+    ],
+    "transport": {"mode": "Scenic bus or cab", "round_trip": 2600, "description": "Ride up through the Nilgiri bends"},
+    "food": {"daily": 1000, "recommendation": "Homestyle biryani, chocolate, and fresh tea"},
+    "activities": [
+      {"morning": "Botanical Garden walk", "afternoon": "Tea tasting at a local estate", "evening": "Bonfire and mountain views", "cost": 120},
+      {"morning": "Toy train photo stop", "afternoon": "Boating on Ooty Lake", "evening": "Homestyle dinner", "cost": 180},
+      {"morning": "Tea Museum visit", "afternoon": "Doddabetta viewpoint", "evening": "Free time at the cottage", "cost": 100},
+      {"morning": "Slow breakfast in the hills", "afternoon": "Chocolate shopping", "evening": "Departure", "cost": 0}
+    ]
+  },
+  "Goa": {
+    "name": "Goa",
+    "summary": "A sunlit coastal break mixing Portuguese history, palm-lined beaches, and unhurried evenings.",
+    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1000&q=80",
+    "highlights": ["Baga Beach", "Fort Aguada", "Dudhsagar Falls"],
+    "best_for": "Beaches, food & lively sunsets",
+    "accommodation": [
+      {"name": "Palm Grove guesthouse", "nightly": 4200, "description": "A breezy stay close to the beach"}
+    ],
+    "transport": {"mode": "Flight or overnight train", "round_trip": 4200, "description": "Rent a scooter locally for short trips"},
+    "food": {"daily": 1200, "recommendation": "Seafood thali, poi bread, and tropical juices"},
+    "activities": [
+      {"morning": "Beach sunrise and swim", "afternoon": "Portuguese quarter walk", "evening": "Sunset at Baga Beach", "cost": 0},
+      {"morning": "Fort Aguada history walk", "afternoon": "Seaside lunch", "evening": "Live music by the shore", "cost": 200},
+      {"morning": "Dudhsagar Falls day trip", "afternoon": "Forest picnic", "evening": "Relaxing foot massage", "cost": 900},
+      {"morning": "Slow beach breakfast", "afternoon": "Souvenir shopping", "evening": "Departure", "cost": 0}
+    ]
+  }
+}
