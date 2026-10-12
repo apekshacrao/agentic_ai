@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Dashboard · StudyFlow{% endblock %}
+{% block content %}
+{% if not plan %}
+  <section class="hero empty">
+    <div class="eyebrow">YOUR PERSONAL STUDY COMPANION</div>
+    <h1>Make every study hour count.</h1>
+    <p>Tell us what you need to learn and we’ll shape it into a realistic, weighted plan.</p>
+    <a class="button" href="{{ url_for('plan_form') }}">Create your first plan <span>→</span></a>
+  </section>
+{% else %}
+  <section class="dashboard-head">
+    <div><div class="eyebrow">YOUR ACTIVE PLAN</div><h1>Keep your momentum.</h1>
+    <p>Exam day: <strong>{{ plan.exam_date }}</strong> · {{ plan.daily_hours }} hours per day</p></div>
+    <a class="button" href="{{ url_for('schedule') }}">Open calendar <span>→</span></a>
+  </section>
+  <section class="stats">
+    <div><span class="stat-number">{{ tasks|selectattr("completed")|list|length }}</span><span>completed tasks</span></div>
+    <div><span class="stat-number">{{ tasks|length }}</span><span>total tasks</span></div>
+    <div><span class="stat-number">{{ tasks|sum(attribute="hours")|round(1) }}</span><span>hours planned</span></div>
+  </section>
+  <section class="section-title"><div><div class="eyebrow">UP NEXT</div><h2>Your upcoming tasks</h2></div><a href="{{ url_for('schedule') }}">View all →</a></section>
+  <div class="task-list">
+  {% for task in tasks if not task.completed %}
+    <article class="task-row"><div class="task-date">{{ task.task_date[5:] }}<small>{{ task.task_date[:4] }}</small></div>
+      <div class="task-info"><strong>{{ task.topic }}</strong><span>{{ task.difficulty }} focus · {{ task.hours }}h</span></div>
+      <form method="post" action="{{ url_for('update') }}"><input type="hidden" name="task_id" value="{{ task.id }}"><label class="check"><input type="checkbox" name="completed" onchange="this.form.submit()"><span></span></label></form>
+    </article>
+  {% else %}<p class="muted">You’re all caught up. Great work!</p>{% endfor %}
+  </div>
+{% endif %}
+{% endblock %}

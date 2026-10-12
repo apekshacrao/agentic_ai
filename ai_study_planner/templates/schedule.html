@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Schedule · StudyFlow{% endblock %}
+{% block content %}
+<section class="dashboard-head"><div><div class="eyebrow">YOUR CALENDAR</div><h1>Study schedule</h1><p>Check off a task and the remaining work will rebalance automatically.</p></div><a class="button outline" href="{{ url_for('plan_form') }}">Adjust plan</a></section>
+<div class="calendar">
+{% for task in tasks %}
+  {% if loop.first or task.task_date != tasks[loop.index0 - 1].task_date %}<div class="day-heading"><span>{{ task.task_date }}</span><span>{{ tasks|selectattr("task_date", "equalto", task.task_date)|sum(attribute="hours")|round(1) }}h planned</span></div>{% endif %}
+  <article class="calendar-task {% if task.completed %}done{% endif %}"><form method="post" action="{{ url_for('update') }}"><input type="hidden" name="task_id" value="{{ task.id }}"><input type="hidden" name="completed" value="{% if not task.completed %}on{% endif %}"><button class="check" type="submit" aria-label="Toggle completion"><span></span></button></form><div><strong>{{ task.topic }}</strong><p>{{ task.difficulty }} focus session</p></div><b>{{ task.hours }}h</b></article>
+{% else %}<p class="muted">No schedule yet.</p>{% endfor %}
+</div>
+{% endblock %}

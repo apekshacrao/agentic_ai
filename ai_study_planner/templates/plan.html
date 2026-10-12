@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Create plan · StudyFlow{% endblock %}
+{% block content %}
+<section class="form-head"><div class="eyebrow">BUILD YOUR PLAN</div><h1>What are you studying?</h1><p>Harder topics automatically receive more time in your calendar.</p></section>
+<form class="planner-form" method="post">
+  <div class="form-grid"><label>Exam date<input type="date" name="exam_date" min="{{ today }}" required></label><label>Days until exam<input type="number" name="days" min="1" max="365" value="14" required></label><label>Daily study hours<input type="number" name="hours" min="0.25" max="24" step="0.25" value="2" required></label></div>
+  <div class="section-title"><div><div class="eyebrow">SYLLABUS</div><h2>Add chapters or topics</h2></div><button class="button outline" type="button" onclick="addTopic()">+ Add topic</button></div>
+  <div id="topics"><div class="topic-row"><input name="topic_name" placeholder="e.g. Linear equations" required><select name="difficulty"><option>Easy</option><option selected>Medium</option><option>Hard</option></select></div></div>
+  <button class="button full" type="submit">Generate my study plan <span>→</span></button>
+</form>
+<script>
+function addTopic() { const row = document.querySelector('.topic-row').cloneNode(true); row.querySelector('input').value = ''; document.getElementById('topics').appendChild(row); }
+</script>
+{% endblock %}
