@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ask the CMRIT Library Assistant about books, timings, rules, and borrowing.">
+    <title>CMRIT Library Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="chat-shell">
+        <header class="chat-header">
+            <p class="eyebrow">CMR Institute of Technology</p>
+            <h1>📚 Library Assistant</h1>
+            <p>Find books, racks, timings, borrowing information, and library rules.</p>
+        </header>
+        <section id="chat-messages" class="chat-messages" aria-live="polite" aria-label="Conversation">
+            <div class="message message-bot">Hello! Ask me about books, timings, rules, or borrowing.</div>
+        </section>
+        <form id="chat-form" class="chat-form">
+            <label class="sr-only" for="message-input">Your question</label>
+            <input id="message-input" name="message" type="text" maxlength="500"
+                   placeholder="Ask a library question..." autocomplete="off" required>
+            <button id="send-button" type="submit">Send</button>
+        </form>
+        <p class="data-note">Sample library data — please verify official timings and policies.</p>
+    </main>
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</body>
+</html>
